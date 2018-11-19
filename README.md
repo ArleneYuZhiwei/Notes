@@ -1,5 +1,6 @@
-##How to use git
-**Official tutorial **
+### How to use git
+
+**Official tutorial**
 
 http://rogerdudler.github.io/git-guide/
 
@@ -7,21 +8,24 @@ http://rogerdudler.github.io/git-guide/
 
 Working Directory-(add)->Index-(commit)->Head
 
-###Initialization
+###Initialization###
+
 Create a new directory and copy its address #D#
 
 **git init**
 
 Tell the git where your barn is :
 
-**git remote add origin #D# **
+**git remote add origin #D#**
 
 Initialize your information
 
 **git config  --global user.name "your name"**
 
 **git config  --global user.email "your email address"**
-###Checkout a repository
+
+### Checkout a repository
+
 Create a working copy of a local repository
 
 **git clone /path/to/repository**
@@ -30,16 +34,18 @@ Or when using a remote server
 
 **git clone username@host:/path/to/repositor**
 
-###Add & Commit
+### Add & Commit
+
 **git add filename**
 
 **git commit -m "A description of this commit"**
 
 The file is committed to the **HEAD**, but not in your remote repository yet.
-###Pushing Changes
+
+### Pushing Change
 Send those changes to your remote repository and branch DB
 
-**git push origin #DB# **
+**git push origin DB**
 
 Now your changes have been pushed to the website and go to github.com:
 
@@ -49,7 +55,8 @@ you can deal with the requests now
 
 before a check, all the commits on this branch will require an update
 
-###Branching
+### Branching
+
 Switch back to branch_a
 
 **git checkout branch_a**
@@ -66,7 +73,7 @@ Push the branch to your remote repository
 
 **git push origin branch**
 
-###Update & Merge
+### Update & Merge
 
 Update your local repository to the newest commit
 
@@ -80,11 +87,12 @@ to handle the conflicts
 
 **git add filename**
 
-###Replace local changes
+### Replace local changes
+
 
 Replace local changes with the last content in **HEAD**
 
-**git checkout --filename **
+**git checkout --filename**
 
 OR Replace local changes with the last content in the server
 
@@ -93,12 +101,14 @@ OR Replace local changes with the last content in the server
 **git reset --hard origin/master**
 
 
-###Tagging
+### Tagging
+
 
 **git tag name #the first 10 characters of the commit id#**
 
 
-###Tips
+### Tips
+
 
 Check the status
 
