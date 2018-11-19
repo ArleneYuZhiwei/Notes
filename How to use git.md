@@ -8,7 +8,7 @@ http://rogerdudler.github.io/git-guide/
 
 Working Directory-(add)->Index-(commit)->Head
 
-###Initialization###
+### Initialization
 
 Create a new directory and copy its address #D#
 
