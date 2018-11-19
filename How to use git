@@ -1,0 +1,47 @@
+official tutorial  
+http://rogerdudler.github.io/git-guide/
+Workflow:
+Working Directory-(add)->Index-(commit)->Head
+
+Initialization
+create a new directory and copy its address #D#
+git init
+git remote add origin #D# (To tell the git where your barn is)
+git config  --global user.name "your name"
+git config  --global user.email "your email address"
+
+Checkout a repository
+git clone /path/to/repository (to create a working copy of a local repository)
+OR
+git clone username@host:/path/to/repository (when using a remote server)
+
+Add & Commit
+git add <filename>
+git commit -m "A description of this commit" (The file is committed to the HEAD, but not in your remote repository yet.)
+
+Pushing Changes
+git push origin #DB# (To send those changes to your remote repository and branch DB)
+Now your changes have been pushed to the website and go to github.com:
+repository->branches->merge request
+(before a check, all the commits on this branch will require an update)
+
+Branching
+git checkout branch_a (switch back to branch_a)
+git checkout -b branch_x (create a new branch named "branch_x" and switch to it )
+git branch -d branch_x (delete the branch_x)
+git push origin <branch> (push the branch to your remote repository)
+
+Update & Merge
+git pull (update your local repository to the newest commit)
+git diff <source_branch> <target_branch> (have a check before mergin)
+git add <filename> (to handle the conflicts)
+
+Replace local changes
+git checkout -- <filename> (Replace local changes with the last content in HEAD)
+OR Replace local changes with the last content in the server
+git fetch origin
+git reset --hard origin/master
+tagging
+git tag name #the first 10 characters of the commit id#
+
+
