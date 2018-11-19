@@ -1,0 +1,212 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title></title>
+<style id="system" type="text/css">*{margin:0;padding:0;}body {	font:13.34px helvetica,arial,freesans,clean,sans-serif;	color:black;	line-height:1.4em;	background-color: #F8F8F8;	padding: 0.7em;}p {	margin:1em 0;	line-height:1.5em;}table {	font-size:inherit;	font:100%;	margin:1em;}table th{border-bottom:1px solid #bbb;padding:.2em 1em;}table td{border-bottom:1px solid #ddd;padding:.2em 1em;}input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}select,option{padding:0 .25em;}optgroup{margin-top:.5em;}pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}pre {	margin:1em 0;	font-size:12px;	background-color:#eee;	border:1px solid #ddd;	padding:5px;	line-height:1.5em;	color:#444;	overflow:auto;	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;	-webkit-border-radius:3px;	-moz-border-radius:3px;border-radius:3px;white-space: pre-wrap;word-wrap:break-word;}pre code {	padding:0;	font-size:12px;	background-color:#eee;	border:none;}code {	font-size:12px;	background-color:#f8f8ff;	color:#444;	padding:0 .2em;	border:1px solid #dedede;}img{border:0;max-width:100%;}abbr{border-bottom:none;}a{color:#4183c4;text-decoration:none;}a:hover{text-decoration:underline;}a code,a:link code,a:visited code{color:#4183c4;}h2,h3{margin:1em 0;}h1,h2,h3,h4,h5,h6{border:0;}h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}h3{margin-top:1em;}hr{border:1px solid #ddd;}ul{margin:1em 0 1em 2em;}ol{margin:1em 0 1em 2em;}ul li,ol li{margin-top:.5em;margin-bottom:.5em;}ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}dt{font-weight:bold;margin-left:1em;}dd{margin-left:2em;margin-bottom:1em;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
+<body marginheight="0"><h2>How to use git</h2>
+<p><strong>Official tutorial </strong>
+
+</p>
+<p><a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a>
+
+</p>
+<p><strong>Workflow</strong>
+
+</p>
+<p>Working Directory-(add)-&gt;Index-(commit)-&gt;Head
+
+</p>
+<h3>Initialization</h3>
+<p>Create a new directory and copy its address #D#
+
+</p>
+<p><strong>git init</strong>
+
+</p>
+<p>Tell the git where your barn is :
+
+</p>
+<p><strong>git remote add origin #D# </strong>
+
+</p>
+<p>Initialize your information
+
+</p>
+<p><strong>git config  --global user.name "your name"</strong>
+
+</p>
+<p><strong>git config  --global user.email "your email address"</strong>
+</p>
+<h3>Checkout a repository</h3>
+<p>Create a working copy of a local repository
+
+</p>
+<p><strong>git clone /path/to/repository</strong>
+
+</p>
+<p>Or when using a remote server
+
+</p>
+<p><strong>git clone username@host:/path/to/repositor</strong>
+
+</p>
+<h3>Add &amp; Commit</h3>
+<p><strong>git add filename</strong>
+
+</p>
+<p><strong>git commit -m "A description of this commit"</strong>
+
+</p>
+<p>The file is committed to the <strong>HEAD</strong>, but not in your remote repository yet.
+</p>
+<h3>Pushing Changes</h3>
+<p>Send those changes to your remote repository and branch DB
+
+</p>
+<p><strong>git push origin #DB# </strong>
+
+</p>
+<p>Now your changes have been pushed to the website and go to github.com:
+
+</p>
+<p><strong>repository-&gt;branches-&gt;merge request</strong>
+
+</p>
+<p>you can deal with the requests now
+
+</p>
+<p>before a check, all the commits on this branch will require an update
+
+</p>
+<h3>Branching</h3>
+<p>Switch back to branch_a
+
+</p>
+<p><strong>git checkout branch_a</strong>
+
+</p>
+<p>Create a new branch named "branch_x" and switch to it
+
+</p>
+<p><strong>git checkout -b branch_x</strong>
+
+</p>
+<p>Delete the branch_x
+
+</p>
+<p><strong>git branch -d branch_x</strong>
+
+</p>
+<p>Push the branch to your remote repository
+
+</p>
+<p><strong>git push origin branch</strong>
+
+</p>
+<h3>Update &amp; Merge</h3>
+<p>Update your local repository to the newest commit
+
+</p>
+<p><strong>git pull</strong>
+
+</p>
+<p>have a check before mergin
+
+</p>
+<p><strong>git diff source_branch target_branch</strong>
+
+</p>
+<p>to handle the conflicts
+
+</p>
+<p><strong>git add filename</strong>
+
+</p>
+<h3>Replace local changes</h3>
+<p>Replace local changes with the last content in <strong>HEAD</strong>
+
+</p>
+<p><strong>git checkout --filename </strong>
+
+</p>
+<p>OR Replace local changes with the last content in the server
+
+</p>
+<p><strong>git fetch origin</strong>
+
+</p>
+<p><strong>git reset --hard origin/master</strong>
+
+
+</p>
+<h3>Tagging</h3>
+<p><strong>git tag name #the first 10 characters of the commit id#</strong>
+
+
+</p>
+<h3>Tips</h3>
+<p>Check the status
+
+</p>
+<p><strong>git status</strong>
+
+</p>
+<p>Unify the format
+
+</p>
+<p><strong>yapf -i name.py</strong>
+
+</p>
+<p>Give up the changes
+
+</p>
+<p><strong>git reset</strong>
+
+</p>
+<p>See the log
+
+</p>
+<p><strong>git log</strong>
+
+</p>
+<p>Pull the code from branch_a
+
+</p>
+<p>It would be better to save the commits which have not been pushed before pull
+
+</p>
+<p><strong>git stash</strong>
+
+</p>
+<p>a.<strong>git checkout branch_a</strong>
+
+</p>
+<p>b.<strong>git pull</strong>
+
+</p>
+<p>c.<strong>git checkout branch_name</strong>
+
+</p>
+<p>d.<strong>git rebase branch_a</strong>
+
+</p>
+<p>e.<strong>git stash apply</strong>
+
+</p>
+<p>About git rebase
+
+</p>
+<p><a href="https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase">https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase</a>
+
+</p>
+<p>Changes not staged for commit:
+
+</p>
+<p>git add (commit those changes) OR git checkout (give up the changes)
+
+</p>
+<p>untracked files:
+
+</p>
+<p>commit those files OR delete those files
+
+</body></html>
